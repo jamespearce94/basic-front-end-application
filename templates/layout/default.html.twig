@@ -4,6 +4,8 @@
     <title>{% block pageTitle %}Bikmo : {% endblock %}</title>
 </head>
 <body>
+{{ include('@layout/header.html.twig') }}
 {% block content %}{% endblock %}
+{{ include('@layout/footer.html.twig') }}
 </body>
 </html>
