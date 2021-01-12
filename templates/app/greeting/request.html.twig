@@ -1,0 +1,25 @@
+{% extends '@layout/default.html.twig' %}
+
+{% block pageTitle %}{{ parent() }} Introduce yourself{% endblock %}
+
+{% block content %}
+    <form method="get">
+        <p>
+            Please introduce yourself.
+        </p>
+        {% if problem is defined %}
+            <p style="border: 1px solid darkred; color: darkred; padding: 1rem;">
+                {{ problem }}
+            </p>
+        {% endif %}
+        <p>
+            <label for="name">Name: <input type="text" name="name"></label>
+        </p>
+        <p>
+            <label for="language">Language: <input type="text" name="language"></label>
+        </p>
+        <p>
+            <input type="submit">
+        </p>
+    </form>
+{% endblock %}
